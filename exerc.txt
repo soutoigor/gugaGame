@@ -1,0 +1,7 @@
+﻿No mini game, proceder as seguintes alterações
+
+- Colocar sons diferentes para cada evento
+- Colocar um placar com acertos e erros
+- Aumentar a velocidade da bola
+- A cada 10 acertos aumentar o tamanho da raquete em 5 pixels
+- A cada erro diminuir o tamanho da raquete em 5 pixels
