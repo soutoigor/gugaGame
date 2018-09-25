@@ -28,6 +28,10 @@ function createAnim() {
     src: ['sound/Reset.wav']
   });
   
+	var dezPontos = new Howl({
+		src: ['sound/10-pontos.wav']
+	});
+  
   
   // Declarando cenário
   var scene = oCanvas.create({
@@ -110,9 +114,10 @@ function createAnim() {
     soundRaquete.play();
     acerto++;
     aumentaPad++;
-        if(aumentaPad == 5){
+        if(aumentaPad == 10){
             pad.width += 10;
             aumentaPad = 0;
+			dezPontos.play();
         }
     $acertoPlacar.textContent = acerto;
   }
