@@ -1,0 +1,48 @@
+body{
+	background-image: url(bg.png);
+	
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+
+.placar{
+	background-color: #800;
+	border: 2px solid #400;
+	border-radius: 20px;
+	color: #FFF;
+	font-size: 24px;
+	font-family: verdana;
+	margin: 5px 0 0 0;
+	text-align: center;
+	border-radius: 20px;
+
+}
+
+h1{
+color: #FFF;
+	font-size: 24px;
+	font-family: verdana;
+	align-self: center;
+}
+
+
+canvas{
+	width: 640px;
+	height: 480px;
+	align-self: center;
+	
+}
+
+a{
+    text-decoration: none;
+}
+
+.control-buttons{
+	
+}

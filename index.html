@@ -6,75 +6,34 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
     <title>oCanvas</title>
- 	  <script src="http://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.1/ocanvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.15/howler.min.js"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.1/ocanvas.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.15/howler.min.js"></script>
     <script type="text/javascript" src="mini_game.js"></script>
-	<style>
-		body{
-			background-image: url(bg.png);
-		}
-		.placares{
-			
-			width: 300px;
-			height: 70px;
-			border-radius: 20px;
-		}
-		.placar{
-			background-color: #800;
-			border: 2px solid #400;
-			border-radius: 20px;
-			color: #FFF;
-			font-size: 24px;
-			font-family: verdana;
-			margin: 5px 0 0 0;
-			text-align: center;
-			
-		}
-		
-		h2{
-		color: #FFF;
-			font-size: 24px;
-			font-family: verdana;
-			margin: 0;
-		}
-		
-        canvas{
-            
-        }
-        a{
-            text-decoration: none;
-        }
-		
-		
-	</style>
+
   </head>
   <body onload="createAnim()">
-  <table align="center">
-	<tr>
-	<td align="center"><h2>Mini Game</h2></td>
-	</tr>
-	</table>
-    
-	<table align="center">
-	<tr>
-	<td> <canvas style='border: 3px solid #FFF;' id="canvas" width="640" height="480" style="border:1px solid #000000;"></canvas></td>
-	</tr>
-	</table>
-	
-   <table align="center">
-	<tr>
-	<td> <div class="placares">
-                <a href="#"><div class="placar" id="reset" >Seu recorde: <span id="recorde" >0</span></div></a>
-                <a href="#"><div class="placar" id="reset" >Reset</div></a>
-		<div class="placar" >Acertos: <span id="acertos">0</span></div>
-		<div class="placar" >Erros: <span id="erros">0</span></div>
-		
-	</div></td>
-	</tr>
-	</table>
-	
-	
-	
+<div class="container" >
+
+  <h1>Mini Game</h1>
+
+<canvas style='border: 3px solid #FFF;' id="canvas" width="640" height="480" ></canvas></td>
+
+<div class="control-buttons" >
+	<a href="#" class="placar" >Seu recorde: <span id="recorde" >0</span></a>
+	<a href="#" class="placar" id="reset" >Reset</a>
+</div>
+
+<div class="score-buttons">
+	<div class="placar" >Acertos: <span id="acertos">0</span></div>
+	<div class="placar" >Erros: <span id="erros">0</span></div>
+</div>
+
+	</div>
+
   </body>
+
 </html>
