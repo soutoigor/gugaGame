@@ -22,7 +22,13 @@ body{
 	margin: 5px 0 0 0;
 	text-align: center;
 	border-radius: 20px;
+	width: 300px;
+	margin: 5px;
 
+}
+
+.help{
+	
 }
 
 h1{
@@ -48,5 +54,27 @@ a{
 .control-buttons, .score-buttons, .game-section{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
+	
+}
+
+
+
+.swal-modal {
+  background-color: rgba(150,0,0,0.69);
+  border: 3px solid white;
+}
+
+
+
+.swal-text {
+	color: #fff; 
+	font-size: 26px;
+	font-weight: 500;
+	font-family: Arial;
+
+}
+
+.swal-button {
+	margin: auto;
 }

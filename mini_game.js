@@ -75,9 +75,9 @@ function createAnim() {
     // reseta o jogo
     $reset.addEventListener('click', function(){
         soundReset.play();
-        setTimeout(function(){
-            location.reload();
-        }, 1000);
+		reload(1000);	
+
+        
     });
 
   scene.setLoop(function() {
@@ -129,10 +129,17 @@ function createAnim() {
     pad.width -= 5;
         if(!pad.width){
 
-            //alert('Game Over Troxa!');
-            swal("Game Over!", "bobão");
             setRecorde();
-            location.reload();
+			
+			swal("GAME OVER!", {
+				  buttons: false,
+				  timer: 2000,
+				 
+				});
+			
+		reload(2500);	
+		
+           
 
         }
   }
@@ -155,7 +162,20 @@ function createAnim() {
         }
 
     }
+	
+	function reload(time){
+		setTimeout(function(){
+            location.reload();
+        }, time);
+	}
+	
+/*
 
-
+	function help(){
+		swal("Hello world!", {
+  button: false,
+})
+	}
+*/
 
 }
