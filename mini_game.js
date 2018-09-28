@@ -164,6 +164,7 @@ function createAnim() {
     ball.velocY = 0;
     setRecorde();
     swal("GAME OVER!", {
+		icon: 'skull.png',
         buttons: false,
         timer: 2000,
     });
