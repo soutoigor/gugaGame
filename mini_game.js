@@ -5,13 +5,14 @@ function createAnim() {
     var $erroPlacar = document.querySelector('#erros');
     var $reset = document.querySelector('#reset');
     var $recorde = document.querySelector('#recorde');
+    var $help = document.querySelector('#help');
 
     var acerto = 0;
     var erro = 0;
 
 
     var aumentaPad = 0;
-        $recorde.textContent = getRecorde();
+        $recorde.textContent = getRecorde() || 0 ;
 
 
   // Sounds
@@ -33,7 +34,7 @@ function createAnim() {
 	});
 
 
-  // Declarando cenário
+  // Declarando cenï¿½rio
   var scene = oCanvas.create({
     canvas: "#canvas",
     background: "#222"
@@ -74,11 +75,17 @@ function createAnim() {
 
     // reseta o jogo
     $reset.addEventListener('click', function(){
-        soundReset.play();
-		reload(1000);	
-
-        
+      soundReset.play();
+	  	reload(1000);	
     });
+
+    $help.addEventListener('click', function(){
+      swal({
+        text: 'Mova o mouse para guiar a raquete e nÃ£o deixar a bolinha cair.',
+        icon: 'mouse-guide.png',
+      });
+    });
+    
 
   scene.setLoop(function() {
     ball.move(ball.velocX,ball.velocY)
@@ -117,7 +124,7 @@ function createAnim() {
         if(aumentaPad == 10){
             pad.width += 10;
             aumentaPad = 0;
-			dezPontos.play();
+			      dezPontos.play();
         }
     $acertoPlacar.textContent = acerto;
   }
@@ -128,27 +135,10 @@ function createAnim() {
     $erroPlacar.textContent = erro;
     pad.width -= 5;
         if(!pad.width){
-
-            setRecorde();
-			
-			swal("GAME OVER!", {
-				  buttons: false,
-				  timer: 2000,
-				 
-				});
-			
-		reload(2500);	
-		
-           
-
+          gameOver();
         }
   }
 
-  function resetGame(){
-
-
-
-    }
 
     function getRecorde(){
         return localStorage.getItem('recorde');
@@ -167,15 +157,19 @@ function createAnim() {
 		setTimeout(function(){
             location.reload();
         }, time);
-	}
+  }
+  
+  function gameOver(){
+    ball.velocX = 0;
+    ball.velocY = 0;
+    setRecorde();
+    swal("GAME OVER!", {
+        buttons: false,
+        timer: 2000,
+    });
+  reload(2500);	
+  }
 	
-/*
 
-	function help(){
-		swal("Hello world!", {
-  button: false,
-})
-	}
-*/
 
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Notable|Space+Mono');
+
 body{
 	background-image: url(bg.png);
 	
@@ -18,7 +20,7 @@ body{
 	border-radius: 20px;
 	color: #FFF;
 	font-size: 24px;
-	font-family: verdana;
+	font-family: 'Space Mono', monospace;
 	margin: 5px 0 0 0;
 	text-align: center;
 	border-radius: 20px;
@@ -27,15 +29,19 @@ body{
 
 }
 
-.help{
-	
+
+
+
+img{
+	width: 60px !important;
 }
 
 h1{
 color: #FFF;
-	font-size: 24px;
-	font-family: verdana;
+	font-size: 35px;
+	font-family: 'Notable', sans-serif;
 	align-self: center;
+
 }
 
 
@@ -54,11 +60,18 @@ a{
 .control-buttons, .score-buttons, .game-section{
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
+
+}
+
+.help{
+	margin: auto !important;
 	
 }
 
-
+.control-buttons{
+	height: 500px;
+}
 
 .swal-modal {
   background-color: rgba(150,0,0,0.69);
@@ -71,7 +84,7 @@ a{
 	color: #fff; 
 	font-size: 26px;
 	font-weight: 500;
-	font-family: Arial;
+	font-family: 'Space Mono', monospace;
 
 }
 
