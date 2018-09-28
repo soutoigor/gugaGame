@@ -1,44 +1,44 @@
 
 function createAnim() {
-	
+
     var $acertoPlacar = document.querySelector('#acertos');
     var $erroPlacar = document.querySelector('#erros');
     var $reset = document.querySelector('#reset');
     var $recorde = document.querySelector('#recorde');
-    
+
     var acerto = 0;
     var erro = 0;
-   
-    
+
+
     var aumentaPad = 0;
         $recorde.textContent = getRecorde();
-         
-	
+
+
   // Sounds
   var soundParede = new Howl({
     src: ['sound/beep5.wav']
   });
   var soundRaquete = new Howl({
     src: ['sound/beep1.wav']
-  }); 
+  });
   var soundLose = new Howl({
     src: ['sound/beep3.wav']
   });
     var soundReset = new Howl({
     src: ['sound/Reset.wav']
   });
-  
+
 	var dezPontos = new Howl({
 		src: ['sound/10-pontos.wav']
 	});
-  
-  
+
+
   // Declarando cenário
   var scene = oCanvas.create({
     canvas: "#canvas",
     background: "#222"
   });
-  
+
   // Declarando bola
   var ball = scene.display.arc({
     x: 25,
@@ -62,16 +62,16 @@ function createAnim() {
     velocX: 5,
     velocY: 5
   });
-    
-  
+
+
     scene.addChild(pad);
 
     //  Passa o movimento do mouse para o movimento do pad
     scene.bind("mousemove", function() {
       pad.x = scene.mouse.x;
     });
-    
-    
+
+
     // reseta o jogo
     $reset.addEventListener('click', function(){
         soundReset.play();
@@ -82,7 +82,7 @@ function createAnim() {
 
   scene.setLoop(function() {
     ball.move(ball.velocX,ball.velocY)
-   
+
 
     if ((ball.x <= 0) || (ball.x >= (scene.width))) {
       ball.velocX = -ball.velocX;
@@ -96,20 +96,20 @@ function createAnim() {
       if ((ball.x > pad.x) && (ball.x < (pad.x + pad.width))) {
         ball.velocY = -ball.velocY;
         setAcerto();
-       
-		
-      } else {  
+
+
+      } else {
         ball.x = 25;
         ball.y = 25;
         setErro();
-        }  
+        }
     }
-	
-	
-	
+
+
+
   }).start();
-  
-  
+
+
   function setAcerto(){
     soundRaquete.play();
     acerto++;
@@ -121,40 +121,41 @@ function createAnim() {
         }
     $acertoPlacar.textContent = acerto;
   }
-  
+
   function setErro(){
     soundLose.play();
     erro++;
     $erroPlacar.textContent = erro;
     pad.width -= 5;
         if(!pad.width){
-            
-            alert('Game Over Troxa!');
+
+            //alert('Game Over Troxa!');
+            swal("Game Over!", "bobão");
             setRecorde();
             location.reload();
-            
+
         }
   }
-  
+
   function resetGame(){
-      
-    
-        
+
+
+
     }
-    
+
     function getRecorde(){
         return localStorage.getItem('recorde');
     }
-    
+
    function setRecorde(){
-       
+
         if(($acertoPlacar.textContent > getRecorde()) && ($acertoPlacar.textContent)){
             localStorage.clear();
             localStorage.setItem('recorde', $acertoPlacar.textContent);
         }
-        
+
     }
-    
-    
+
+
 
 }

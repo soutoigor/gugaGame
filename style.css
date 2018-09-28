@@ -5,9 +5,10 @@ body{
 
 .container{
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: inline-flex;
+	justify-content: space-between;
 	align-content: center;
+	align-items: center;
 }
 
 
@@ -36,6 +37,7 @@ canvas{
 	width: 640px;
 	height: 480px;
 	align-self: center;
+	border: 3px solid #FFF;
 	
 }
 
@@ -43,6 +45,8 @@ a{
     text-decoration: none;
 }
 
-.control-buttons{
-	
+.control-buttons, .score-buttons, .game-section{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
