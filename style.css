@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Notable|Space+Mono');
 
 body{
-	background-image: url(bg.png);
+	background-image: url(images/bg.png);
 	
 }
 
@@ -9,8 +9,8 @@ body{
 	display: flex;
 	flex-direction: inline-flex;
 	justify-content: space-between;
-	align-content: center;
-	align-items: center;
+	
+	
 }
 
 
@@ -52,6 +52,9 @@ canvas{
 	border: 3px solid #FFF;
 	
 }
+canvas:hover{
+	cursor: none;
+}
 
 a{
     text-decoration: none;
@@ -61,16 +64,19 @@ a{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	
 
 }
 
-.help{
-	margin: auto !important;
-	
+#help{
+	align-self: center;
+	margin-top: 20px;
 }
 
 .control-buttons{
-	height: 500px;
+margin-top: 30px;
+	
+	
 }
 
 .swal-modal {

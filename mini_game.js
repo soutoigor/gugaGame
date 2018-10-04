@@ -6,7 +6,7 @@ function createAnim() {
     var $reset = document.querySelector('#reset');
     var $recorde = document.querySelector('#recorde');
     var $help = document.querySelector('#help');
-
+   
     var acerto = 0;
     var erro = 0;
 
@@ -37,7 +37,7 @@ function createAnim() {
   // Declarando cen�rio
   var scene = oCanvas.create({
     canvas: "#canvas",
-    background: "#222"
+    background: "#111"
   });
 
   // Declarando bola
@@ -80,11 +80,15 @@ function createAnim() {
     });
 
     $help.addEventListener('click', function(){
+      
       swal({
-        text: 'Mova o mouse para guiar a raquete e não deixar a bolinha cair.',
-        icon: 'mouse-guide.png',
+        text: 'Mova o mouse para guiar a raquete e não deixar a bolinha cair.\nA cada 10 acertos, a raquete irá aumentar, e a cada erro, ela diminui.',
+        icon: 'images/mouse-guide.png',
       });
+     
     });
+
+    
     
 
   scene.setLoop(function() {
@@ -164,7 +168,7 @@ function createAnim() {
     ball.velocY = 0;
     setRecorde();
     swal("GAME OVER!", {
-		icon: 'skull.png',
+		icon: 'images/skull.png',
         buttons: false,
         timer: 2000,
     });
