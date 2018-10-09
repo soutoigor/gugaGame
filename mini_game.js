@@ -1,6 +1,6 @@
 
 function createAnim() {
-
+  'use strict';
 // Declarando elementos do DOM
     var $acertoPlacar = document.querySelector('#acertos');
     var $erroPlacar = document.querySelector('#erros');
@@ -160,24 +160,8 @@ inclui um ponto de erro e diminui a raquete */
   reload(2500);
   }
 
-  // Ativa botão que reseta o jogo
-      $reset.addEventListener('click', function(){
-        soundReset.play();
-  	  	reload(1000);
-      });
-
-// Ativa o bot]ao de ajuda apresentando a modal.
-      $help.addEventListener('click', function(){
-
-        swal({
-          text: 'Mova o mouse para guiar a raquete e não deixar a bolinha cair.\nA cada 10 acertos, a raquete irá aumentar, e a cada erro, ela diminui.',
-          icon: 'images/mouse-guide.png',
-        });
-
-    });
-
 // Caso a bolinha bata na parede, o som é ativado e a bolinha continua se movimentando na direção oposta
-	function hitWall(){
+  function hitWall(){
 		if ((ball.x <= 0) || (ball.x >= (scene.width))) {
 		      ball.velocX = -ball.velocX;
 		      soundParede.play();
@@ -188,5 +172,24 @@ inclui um ponto de erro e diminui a raquete */
     }
 	}
 
+  // Ativa botão que reseta o jogo
+      $reset.addEventListener('click', function(e){
+        e.preventDefault();
+        soundReset.play();
+  	  	reload(1000);
+      });
 
-}
+// Ativa o bot]ao de ajuda apresentando a modal.
+      $help.addEventListener('click', function(e){
+        e.preventDefault();
+        swal({
+          text: 'Mova o mouse para guiar a raquete e não deixar a bolinha cair.\nA cada 10 acertos, a raquete irá aumentar, e a cada erro, ela diminui.',
+          icon: 'images/mouse-guide.png',
+        });
+
+    });
+
+	
+
+
+};
