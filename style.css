@@ -71,6 +71,7 @@ a{
 #help{
 	align-self: center;
 	margin-top: 20px;
+	cursor: help;
 }
 
 .control-buttons{
