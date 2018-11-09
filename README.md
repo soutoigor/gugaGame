@@ -1,9 +1,14 @@
 # gugaGame
 
-## O que é
-Este é um simples jogo criado para uma aula da matéria de Programação para Jogos na faculdade.
-A ideia era resolver o exercício criando um jogo arcade de raquete, onde devia ter pontos de acertos e erros,  sons e usando o oCanvas.
+## O que Ã©
+Este Ã© um simples jogo criado para uma aula da matÃ©ria de ProgramaÃ§Ã£o para Jogos na faculdade.
+A ideia era resolver o exercÃ­cio criando um jogo arcade de raquete, onde devia ter pontos de acertos e erros,  sons e usando o oCanvas.
 Acabei gostando, me simpatizando com o joguinho e dei uma dedicada um pouco maior :grin:
-O nome ~~criativo~~ "Guga Game" foi por conta do jogador de tênis. ~~Raquete... Bolinha... Tênis...~~ :grimacing:
+O nome ~~criativo~~ "Guga Game" foi por conta do jogador de tÃªnis. ~~Raquete... Bolinha... TÃªnis...~~ :grimacing:
 
 ## Como usar
+Simples, baixe os arquivos ou clone o repositÃ³rio para o seu computador;
+Acesse a pasta baixada e abra o arquivo index.html ;
+
+## Autor
+Igor Souto de Souza https://www.linkedin.com/in/igor-souto/
