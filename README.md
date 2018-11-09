@@ -10,5 +10,15 @@ O nome ~~criativo~~ "Guga Game" foi por conta do jogador de tênis. ~~Raquete...
 Simples, baixe os arquivos ou clone o repositório para o seu computador;
 Acesse a pasta baixada e abra o arquivo index.html ;
 
+## Tecnologias utilizadas
+*HTML5
+*CSS3
+*Javascript
+*Lib Canvas
+*oCanvas
+*Sweet Alert
+*Howler.js
+
+
 ## Autor
 Igor Souto de Souza https://www.linkedin.com/in/igor-souto/
