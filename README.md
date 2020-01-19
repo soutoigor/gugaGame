@@ -1,24 +1,27 @@
 # gugaGame
 
-## O que é
-Este é um simples jogo criado para uma aula da matéria de Programação para Jogos na faculdade.
-A ideia era resolver o exercício criando um jogo arcade de raquete, onde devia ter pontos de acertos e erros,  sons e usando o oCanvas.
-Acabei gostando, me simpatizando com o joguinho e dei uma dedicada um pouco maior :grin:
-O nome ~~criativo~~ "Guga Game" foi por conta do jogador de tênis. ~~Raquete... Bolinha... Tênis...~~ :grimacing:
+This is a simple arcade game created for the "Game Programming" subject in college.  
+The idea was to resolve a exercise where I needed to create a game with a "racket", where it should have hits and misses scores, sounds and use the "oCanvas" lib.  
+The name is inspired in the brazillian tennins player "Guga" :grin:  
 
-## Como usar
-Simples, baixe os arquivos ou clone o repositório para o seu computador;
-Acesse a pasta baixada e abra o arquivo index.html ;
+## Screenshot
+![home](https://i.imgur.com/5zxnUSl.png?1)
 
-## Tecnologias utilizadas
-*HTML5
-*CSS3
-*Javascript
-*Lib Canvas
-*oCanvas
-*Sweet Alert
-*Howler.js
+## Setup
+
+- Download or clone the repo
+- Run the `index.html` file
+- Enjoy!!!
+
+## Made with
+- HTML5
+- CSS3
+- JavaScript
+- Canvas API
+- oCanvas
+- Sweet Alert
+- Howler.js
 
 
-## Autor
-Igor Souto de Souza https://www.linkedin.com/in/igor-souto/
+## Author
+[Igor Souto](https://www.linkedin.com/in/igor-souto/)
