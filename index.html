@@ -4,42 +4,29 @@
     <meta charset="utf-8">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
     <title>GugaGame</title>
-
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.1/ocanvas.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.15/howler.min.js"></script>
-	<script type="text/javascript" src="mini_game.js"></script>
-
+		<script type="text/javascript" src="mini_game.js"></script>
   </head>
-
-<body onload="createAnim()">
-
-<div class="container" >
-
-	<div class="control-buttons"  >
-
-		<a href="#" class="placar" id="reset" >Reset</a>
-		<div class="placar" >Seu recorde: <span id="recorde" >0</span></div>
-
-		<a href="#" id='help' ><img src="images/information.png"  ></a>
-	</div>
-
-	<div class="game-section" >
-		<h1>Guga Game</h1>
-		<canvas id="canvas" width="640" height="480" ></canvas>
-	</div>
-
-	<div class="score-buttons">
-		<div class="placar" >Acertos: <span id="acertos">0</span></div>
-		<div class="placar" >Erros: <span id="erros">0</span></div>
-
-	</div>
-
-</div>
-
-</body>
+	<body onload="createAnim()">
+		<div class="container" >
+			<div class="control-buttons"  >
+				<a href="#" class="chip" id="reset">Reset</a>
+				<div class="chip" >Seu recorde: <span id="record">0</span></div>
+				<a href="#" id='help'><img src="images/information.png"  ></a>
+			</div>
+			<div class="game-section" >
+				<h1>Guga Game</h1>
+				<canvas id="canvas" width="640" height="480" ></canvas>
+			</div>
+			<div class="score-buttons">
+				<div class="chip">Acertos: <span id="score">0</span></div>
+				<div class="chip">Erros: <span id="misses">0</span></div>
+			</div>
+		</div>
+	</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.1/ocanvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.15/howler.min.js"></script>
 </html>
